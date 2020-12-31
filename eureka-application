@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev # 激活开发环境配置
+
+
+---
+server:
+  port: 6868
+  
+eureka:
+  client:
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
+spring:     
+  profiles: dev # 开发环境
+
+---
+server:
+  port: 5858
+  
+eureka:
+  client:
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
+spring:     
+  profiles: prod # 开发环境
