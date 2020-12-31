@@ -11,7 +11,7 @@ server:
 #DB Configuration:
 
 spring:
-  profiles:dev
+  profiles: dev
   application:
     name: zuul_server #指定服务名
 
@@ -51,7 +51,7 @@ server:
 #DB Configuration:
 
 spring:
-  profiles:port
+  profiles: prod
   application:
     name: zuul_server #指定服务名
 
