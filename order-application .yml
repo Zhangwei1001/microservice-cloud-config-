@@ -4,8 +4,6 @@ spring:
 ---
 server:
   port: 8003
-
-
 #DB Configuration:
 spring:
   profiles: dev # 开发环境
@@ -16,11 +14,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/jingdong?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     username: root
     password: zhang1001.
-
 mybatis:
   type-aliases-package: com.wanshi.po
   mapper-locations: classpath:mapper/*Mapper.xml
-
 eureka:
   client:
     registerWithEureka: true # 服务注册开关
@@ -31,23 +27,19 @@ eureka:
 ---
 server:
   port: 8004
-
-
 #DB Configuration:
 spring:
   profiles: prod # 开发环境
   application:
-    name: product-service #这个很重要，这在以后的服务与服务之间相互调用一般都是根据这个name
+    name: order-service #这个很重要，这在以后的服务与服务之间相互调用一般都是根据这个name
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/jingdong2?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     username: root
     password: zhang1001.
-
 mybatis:
   type-aliases-package: com.wanshi.po
   mapper-locations: classpath:mapper/*Mapper.xml
-
 eureka:
   client:
     registerWithEureka: true # 服务注册开关
